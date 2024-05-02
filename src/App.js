@@ -13,9 +13,14 @@ function App() {
     {id: 3, name:"secure_file_transfer", label: "Secure File Transfer", icon:`${iconsApi.generalIcons}/secure_file_icon.png`, link:"secure_file_transfer", description: "Manage all of business processes from a single platform with rapid app building, turn-key integrations, workflows, automations and data centricity"},
   ]
 
-  const PageStyle = {
-    
+  const getIcons = async()=>{
+    const response = await nlightnApi.getTable("icons")
+    console.log(response.data)
   }
+
+  useEffect(()=>{
+    getIcons()
+  },[])
 
   const CardStyle = {
     display: "flex",
@@ -39,12 +44,12 @@ function App() {
  }
 
  const TitleStyle = {
-    fontSize: "24px",
+    fontSize: "20px",
     fontWeight: "bold",
     color: "black",
     textAlign: "left",
     margin: "10px",
-    height: "75px"
+    height: "50px"
  }
 
  const description = {
