@@ -70,7 +70,7 @@ const [hoveredItem, setHoveredItem] = useState("")
   return (
     <div className="d-flex flex-column w-100" style={{height: "100vh", width: "100vw", backgroundImage: "linear-gradient(0deg, rgba(200,225,245), white)"}}>
 
-      <div className="d-flex w-100 justify-content-center">
+      <div className="d-flex w-100 justify-content-center mt-5">
         <img style={LogoStyle} src={`${iconsApi.generalIcons}/nlightn_labs_logo.png`}></img>
       </div>
 
