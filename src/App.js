@@ -8,19 +8,11 @@ import React, {useState, useEffect} from "react"
 function App() {
 
   const apps = [
-    {id: 1, name:"business_engagement_system", label: "Business Engagement System", icon:`${iconsApi.generalIcons}/DealFlowIcon.png`, link:"besfreeagent", description: "Manage all of business processes from a single platform with rapid app building, turn-key integrations, workflows, automations and data centricity"},
+    {id: 1, name:"business_engagement_system", label: "Business Engagement System", icon:`${iconsApi.generalIcons}/DealFlowIcon.png`, link:"business_engagement_system", description: "Manage all of business processes from a single platform with rapid app building, turn-key integrations, workflows, automations and data centricity"},
     {id: 2, name:"ai_deployment_lab", label: "AI Deployment Lab", icon:`${iconsApi.generalIcons}/genAI_icon.png`, link:"ailab", description: "Deploy AI by aggregating and structuring data, buiding and training AI models, and building agents, bots, and agents"},
     {id: 3, name:"secure_file_transfer", label: "Secure File Transfer", icon:`${iconsApi.generalIcons}/secure_file_icon.png`, link:"secure_file_transfer", description: "Manage all of business processes from a single platform with rapid app building, turn-key integrations, workflows, automations and data centricity"},
   ]
 
-  const getIcons = async()=>{
-    const response = await nlightnApi.getTable("icons")
-    console.log(response.data)
-  }
-
-  useEffect(()=>{
-    getIcons()
-  },[])
 
   const CardStyle = {
     display: "flex",
